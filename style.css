@@ -187,6 +187,26 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    color: #0666F9;
+}
+
+.skill-card .icon-box {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+}
+
  
 @media (max-width: 700px) {
     .about-section {
