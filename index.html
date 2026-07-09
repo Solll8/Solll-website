@@ -10,7 +10,7 @@
 
 <body>
     <header class="site-header">
-        <h1>Solll's Portfolio</h1>
+        <h1><span class="text-color">Solll's</span> Portfolio</h1>
 
         <nav class="nav" aria-label="Main navigation">
             <ul class="nav-list">
@@ -25,11 +25,14 @@
     <main>
         <section id="intro" class="intro-section">
             <div class="intro-content">
-                <h4>Hi, I'm Solomon</h4>
+                <h4>Hi, I'm <span class="text-color">Solomon</span></h4>
                 <h2>I Build Websites.</h2>
                 <h2>I Tell Stories.</h2>
                 <p>I combine web design and video editing to turn ideas into digital experiences people can see, feel, and remember.</p>
-
+                <div class="btn-intro">
+                    <button class="btn-color" class="intro-button">View My Work</button>
+                    <button class="intro-button">Get in Touch</button>
+                </div>
                 <div class="social-links">
                     <a href="#" aria-label="Social link 1">
                         <img src="images/github.png" alt="">
@@ -52,7 +55,7 @@
             </div>
 
             <div class="about-me">
-             <h3>About Me</h3>
+             <h3 class="text-color">About Me</h3>
                 <p>
                     I am a passionate web developer and video editor. I enjoy creating engaging digital experiences that captivate audiences and tell compelling stories. With a strong foundation in both web development and video editing, I strive to bring ideas to life through innovative design and storytelling techniques.
                 </p>
@@ -80,7 +83,12 @@
         <section id="portfolio" class="portfolio">
             <section id="web-dev" class="portfolio-section">
                 <div class="portfoilo-header">
-                    <h2>Web development</h2>
+                    <div>
+                        <h2 class="img-heading">
+                            <img src="images/web dev img.png" alt="Web Development Icon">
+                            Web development
+                        </h2>
+                    </div>
                     <button class="all-work">View All</button>
                 </div>
                 <div class="project-list">
@@ -106,7 +114,10 @@
 
             <section id="video-editing" class="portfolio-section">
                 <div class="portfoilo-header">
-                    <h2>Video Editing</h2>
+                    <h2 class="img-heading">
+                        <img src="images/movie board.avif" alt="Video Editing Icon">
+                        Video Editing
+                    </h2>
                     <button class="all-work">View All</button>
                 </div>
                 <div class="project-list">

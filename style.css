@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #000508;
 }
 body {
     margin: 0;
@@ -20,6 +20,10 @@ body {
 
 .site-header h1 {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
+
+}
+.text-color {
+    color: #0666F9;
 }
 
 .nav-list a {
@@ -67,14 +71,17 @@ body {
 }
 
 .intro-photo {
-    flex: 2 1 300px;
+    flex: 1 1 300px;
     height: auto;
 }
 
 .intro-photo img {
-    width: 100%;
-    height: auto;
+    width: 65%;
+    aspect-ratio: 1/1;
     object-fit: cover;
+     border: .2rem solid #0666F9;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #0666F9;
 }
 
 .nav-list {
@@ -85,6 +92,27 @@ body {
     justify-content: center;
     gap: clamp(0.75rem, 2vw, 1.5rem);
 }
+.btn-intro {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+.btn-color {
+    background-color: #0666F9;
+    color: white;
+    font-size: clamp(2rem, 2vw, 3rem);
+    padding: 0.75rem 1.5rem;
+    border: .2rem solid #0666F9;
+    border-radius: .75rem;
+}
+.intro-button {
+    padding: 0.75rem 1.5rem;
+    border: .2rem solid #0666F9;
+    font-size: clamp(2rem, 2vw, 3rem);
+    border-radius: .75rem;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -118,6 +146,10 @@ body {
 .about-img img {
     object-fit: cover;
     width: 100%;
+    aspect-ratio: 1/1;
+    border: .2rem solid #0666F9;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #0666F9;
 }
 
 .about-me {
@@ -197,6 +229,16 @@ body {
     color:whtie;
 
 }
+.img-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.img-heading img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
 
 .portfolio-section h2 {
     text-align: left;
@@ -204,7 +246,7 @@ body {
 
 .project-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
 .project-list h3 p{
@@ -226,11 +268,16 @@ body {
     object-fit: cover;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 768px) and (max-width: 1368px) {
     .project-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+/*@media (min-width: 1369px) {
+    .project-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}*/
 @media (max-width: 700px) {
     .site-header {
         flex-direction: column;
