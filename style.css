@@ -2,11 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #000508;
 }
 body {
     margin: 0;
     padding: 0;
+    background-color: #000508;
+    color: white;
 }
 .site-header {
     color: white;
@@ -246,7 +247,7 @@ body {
 }
 .portfolio-section button{
     font-size: clamp(1rem, 2vw, 1.25rem);
-    color:whtie;
+    color: white;
 
 }
 .img-heading {
