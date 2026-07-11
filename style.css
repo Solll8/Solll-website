@@ -108,10 +108,22 @@ body {
     border-radius: .75rem;
 }
 .intro-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     border: .2rem solid #0666F9;
     font-size: clamp(2rem, 2vw, 3rem);
     border-radius: .75rem;
+    color: white;
+}
+
+.intro-button svg {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    display: block;
 }
 
 .social-links {
