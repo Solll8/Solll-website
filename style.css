@@ -23,8 +23,10 @@ body {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
 
 }
-.text-color {
+.large_text {
     color: #0666F9;
+    font-weight: bold;
+    font-size: clamp(2rem, 3vw, 3rem);
 }
 
 .nav-list a {
@@ -80,9 +82,11 @@ body {
     width: 65%;
     aspect-ratio: 1/1;
     object-fit: cover;
+    object-position: center 10%;
      border: .2rem solid #0666F9;
     border-radius: 50%;
     box-shadow: 0 0 1.5rem #0666F9;
+
 }
 
 .nav-list {
@@ -163,6 +167,7 @@ body {
 
 .about-img img {
     object-fit: cover;
+    object-position: center 10%;
     width: 100%;
     aspect-ratio: 1/1;
     border: .2rem solid #0666F9;
