@@ -3,11 +3,15 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-padding-top: 8rem;
+}
 body {
     margin: 0;
     padding: 0;
     background-color: #000508;
     color: white;
+    
 }
 header{
     position: sticky;
@@ -44,15 +48,60 @@ header{
     font-weight: bold;
     font-size: clamp(2rem, 3vw, 3rem);
 }
-.nav-list {
-    list-style: none;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-
+.nav-bar {
+    justify-self: center;
 }
-
-.nav-list a {
-    color: white;
+.nav-bar > nav > ul:not(.sidebar) a {
+    padding-inline: clamp(0.65rem, 1.5vw, 1.5rem);
+}
+nav {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav li {
+    height: 50px;
+}
+nav a {
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav a:hover {
+    background-color: var(--brand-red);
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(280px, 100vw);
+    max-height: 100dvh;
+    overflow-y: auto;
+    z-index: 999;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li {
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+}
+.menu-button {
+    display: none;
 }
 
 .intro-section {
@@ -64,6 +113,7 @@ header{
     height:auto;
     margin: 0;
     text-align: left;
+    padding-top: 10px;
 }
  
 .intro-content {
@@ -78,21 +128,33 @@ header{
     text-align: center;
 }
 
-.intro-content h4,
-.intro-content h2,
-.intro-content p {
+.intro-greeting,
+.intro-title,
+.intro-description {
     padding: .625rem 0;
+    text-shadow: 5px 6px 15px #0666F9;
 }
-.intro-content h2 {
+.intro-title {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: bold;
 }
-.intro-content h4 {
+.intro-greeting {
+    margin-bottom: 0;
+    padding: 0;
+}
+.intro-title {
+    margin: 0;
+}
+.intro-title span {
+    display: block;
+}
+.intro-greeting {
     font-size: clamp(1.25rem, 3vw, 2rem);
 }
-.intro-content p {
+.intro-description {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
+
 
 .intro-photo {
     flex: 1 1 300px;
@@ -332,9 +394,14 @@ header{
         height: 100px;
     }
 
-    .nav-list {
-        flex-direction: column;
-        gap: 0.75rem;
+    .nav-bar {
+        justify-self: start;
+    }
+     .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
     }
 }
 @media (max-width: 700px) {
@@ -351,6 +418,11 @@ header{
         text-align: center;
     }
     .about-img img{
+        width: 100%;
+    }
+}
+@media (max-width: 400px){
+    .sidebar {
         width: 100%;
     }
 }

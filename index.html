@@ -10,25 +10,36 @@
 
 <body id="home">
     <header class="site-header">
+        <div class="nav-bar" style="grid-area: nav;"> 
+                <nav>
+                     <ul class="sidebar">
+                        <li onclick=hideSidebar()><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                         <li><a href="#intro">Intro</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#web-dev">Web development</a></li>
+                        <li><a href="#video-editing">Video editing</a></li>
+                     </ul>
+                    <ul>
+                        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                        <li class="hideOnMobile"><a href="#intro">Intro</a></li>
+                        <li class="hideOnMobile"><a href="#about">About</a></li>
+                        <li class="hideOnMobile"><a href="#web-dev">Web development</a></li>
+                        <li class="hideOnMobile"><a href="#video-editing">Video editing</a></li>
+                    </ul>
+                </nav>
+        </div>
         <h1><a href="#home"><span class="text-color">Solll's</span> Portfolio</a></h1>
-
-        <nav class="nav" aria-label="Main navigation">
-            <ul class="nav-list">
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#web-dev">Web development</a></li>
-                <li><a href="#video-editing">Video editing</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
         <section id="intro" class="intro-section">
             <div class="intro-content">
-                <h4>Hi, I'm <span class="large_text">Solomon</span></h4>
-                <h2>I Build Websites.</h2>
-                <h2>I Tell Stories.</h2>
-                <p>I combine web design and video editing to turn ideas into digital experiences people can see, feel, and remember.</p>
+                <p class="intro-greeting">Hi, I'm <span class="large_text">Solomon</span></p>
+                <h2 class="intro-title">
+                    <span>I Build Websites.</span>
+                    <span>I Tell Stories.</span>
+                </h2>
+                <p class="intro-description">I combine web design and video editing to turn ideas into digital experiences people can see, feel, and remember.</p>
                 <div class="btn-intro">
                     <a href="#portfolio" class="btn-color intro-button">
                         <svg
@@ -255,6 +266,16 @@
     <footer class="site-footer">
         <p>&copy; 2026 Solomon</p>
     </footer>
+      <script>
+        function showSidebar() {
+            const sidebar = document.querySelector(`.sidebar`)
+            sidebar.style.display = `flex`;
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector(`.sidebar`)
+            sidebar.style.display = `none`;
+        }
+    </script>
 </body>
 
 </html>
