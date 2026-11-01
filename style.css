@@ -9,7 +9,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #000508;
+    background-color: #030A12;
     color: white;
     
 }
@@ -111,9 +111,9 @@ nav a:hover {
     align-items: center;
     gap: clamp(1.5rem, 4vw,2.5rem);
     height:auto;
-    margin: 0;
+    margin: 50px 0;
     text-align: left;
-    padding-top: 10px;
+    padding:0;
 }
  
 .intro-content {
@@ -132,7 +132,6 @@ nav a:hover {
 .intro-title,
 .intro-description {
     padding: .625rem 0;
-    text-shadow: 5px 6px 15px #0666F9;
 }
 .intro-title {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
@@ -141,6 +140,7 @@ nav a:hover {
 .intro-greeting {
     margin-bottom: 0;
     padding: 0;
+    
 }
 .intro-title {
     margin: 0;
@@ -148,21 +148,26 @@ nav a:hover {
 .intro-title span {
     display: block;
 }
-.intro-greeting {
-    font-size: clamp(1.25rem, 3vw, 2rem);
+.intro-greeting, .large_text {
+    font-size: 100px;
+    text-align: start;
 }
 .intro-description {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-size: 25px;
+    line-height: 45px;
+    text-align: start;
 }
 
 
 .intro-photo {
     flex: 1 1 300px;
     height: auto;
+    margin: 20px;
+    padding-left: 100px;
 }
 
 .intro-photo img {
-    width: 65%;
+    width: 75%;
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center 10%;
@@ -198,12 +203,13 @@ nav a:hover {
     padding: 0.75rem 1.5rem;
     gap: 0.5rem;
     align-items: center;
-    border: .2rem solid white;
+    border: .1px solid gray;
     border-radius: 1rem;
     width: 20rem;
     max-width: 100%;
     min-height: 4rem;
-    height:auto
+    height: auto;
+    text-decoration: none;
 }
 
 .btn-color {
@@ -225,8 +231,8 @@ nav a:hover {
     gap: 1.25rem;
 }
 .social-links img {
-    width: 1.9rem;
-    height: 1.9rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .about-section {
@@ -234,11 +240,17 @@ nav a:hover {
     grid-template-columns: .5fr 1fr 1fr;
     align-items: center;
     gap: clamp(1.5rem, 4vw, 3rem);
-    padding: clamp(2rem, 6vw, 4rem);
-    margin: 0;
+    padding: 1.5rem;
+    margin: 2rem;
     grid-template-areas:
         "about-img about-me skill-card";
+    
+    border: 1px solid rgba(6, 102, 249, 0.65);
+    border-radius: 20px;
+    box-shadow: 0 1px 35px #0666F9;
+    transform: translate(-20px);
 }
+
 
 .about-img {
     display: flex;
@@ -263,20 +275,23 @@ nav a:hover {
     gap: 1rem;
     text-align: left;
     grid-area: about-me;
+    font-size: 3rem;
 }
 
 .about-me p {
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
     line-height: 1.6;
 }
 
 .skill-card {
     display: grid;
     gap: 0.75rem;
-    padding: 1.25rem;
+    padding: 1rem;
     text-align: center;
     grid-template-columns: repeat(3, 1fr);
     grid-area: skill-card;
+    font-size: 1.5rem;
+    
 }
 
 .skill-card h4{
@@ -288,7 +303,7 @@ nav a:hover {
 }
 .skill-card img {
     width: auto;
-    height:4rem;
+    height: 6rem;
     object-fit: cover;
     margin-bottom: 0.5rem;
 }
@@ -297,14 +312,14 @@ nav a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    width: 5rem;
+    height: 5rem;
     color: #0666F9;
 }
 
 .skill-card .icon-box {
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -326,14 +341,27 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
 }
+.header-icon {
+    width: 3rem;
+    height: 3rem;
+}
 
 .portfolio-section {
     display: grid;
     gap: 1.5625rem;
 }
-.portfolio-section button{
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: white;
+.view-work{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.25rem;
+    padding-right: 3rem;
+    color: #0666F9;
+}
+.view-work img {
+    height: 35px;
+    width: 35px;
+    color: #0666F9;
 
 }
 .img-heading {
