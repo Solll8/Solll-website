@@ -392,15 +392,43 @@ nav a:hover {
 .project-card {
     display: grid;
     gap: 1.25rem;
-    padding: 1.25rem;
-   border: .25rem solid white;
-   border-radius: 1rem;
+    background-color: #0B121C;
+   border: 1px solid #303a46;
+   border-radius: clamp(0.75rem, 1vw, 1rem);
+   padding: clamp(1rem, 1.5vw, 1.5rem);
+     transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #0666F9;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(6, 102, 249, 0.2);
 }
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
+    aspect-ratio: 16/9;
+}
+.project-card h3 {
+    font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+    
+}
+
+.project-card p {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    line-height: 1.6;
+}
+a .project-card,
+a .project-card:visited {
+    text-decoration: none;
+    color: white;
 }
 
 .site-footer {
